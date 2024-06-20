@@ -1,18 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_reg_log.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
 </head>
+
 <body>
+    <h1>Regístrate en </h1>
+    <p>Crea una cuenta para acceder a nuestras ofertas exclusivas.</p>
     <a href="{% url 'home' %}">exit</a>
 
     <form class="from" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="register">	
-    </form>	
+        <input type="submit" value="register">
+    </form>
 </body>
+
 </html>

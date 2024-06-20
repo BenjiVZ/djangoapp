@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -16,9 +17,11 @@
     </div>
     {% endfor %}
     {% endif %}
-    <h1>hello word</h1>
-    <a href="{% url 'logs' %}">Login</a>
-    <a href="{% url 'regs' %}">register</a>
+    <nav>
+        <a href="{% url 'logs' %}">Login</a>
+        <a href="{% url 'regs' %}">register</a>
+        <a href="{% url 'logst' %}">logout</a>
+    </nav>
 </body>
 
 </html>
