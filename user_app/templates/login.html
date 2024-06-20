@@ -14,11 +14,13 @@
     <p>Por favor, inicia sesión para acceder a tu cuenta.</p>
     <a href="{% url 'home' %}">exit</a>
 
-    <form class="from" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="login">
-    </form>
+    <div class="container">
+        <form class="from" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="login">
+        </form>
+    </div>
 </body>
 
 </html>

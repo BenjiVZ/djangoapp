@@ -14,11 +14,14 @@
     <p>Crea una cuenta para acceder a nuestras ofertas exclusivas.</p>
     <a href="{% url 'home' %}">exit</a>
 
-    <form class="from" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="register">
-    </form>
+    <div class="container">
+        <form class="from" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="register">
+        </form>
+    </div>
+
 </body>
 
 </html>
