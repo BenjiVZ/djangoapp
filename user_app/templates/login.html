@@ -8,5 +8,11 @@
 </head>
 <body>
     <a href="{% url 'hom' %}">exit</a>
+
+    <form class="from" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="login">	
+    </form>	
 </body>
 </html>
