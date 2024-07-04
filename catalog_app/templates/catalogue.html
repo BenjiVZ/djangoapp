@@ -11,8 +11,17 @@
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {% for p in productos %}
+        <div class="producto">
+            {% if p.imagen %}
+            <img src="{{ p.imagen.url }}" alt="{{ p.nombre }}">
+            {% endif %}
+            <h3>{{ p.marca.nombre | capfirst }}</h3>
+            <h2>{{ p.nombre | title }}</h2>
+            <h2>${{ p.precio }}</h2>
+            <p>{{ p.descripcion }}</p><br>
+        </div>
+        {% endfor %}
     </main>
 
     <footer>

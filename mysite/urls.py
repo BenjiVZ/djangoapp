@@ -19,6 +19,7 @@ from django.urls import path
 from myapp.views import home
 from user_app.views import log, reg
 from django.contrib.auth.views import LoginView, LogoutView
+from catalog_app.views import catalog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,5 @@ urlpatterns = [
     path('register/', reg, name='regs'),
     path('login/', LoginView.as_view(template_name='login.html'), name='logs'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logst'),
-
+    path('catalog/', catalog, name='catalog'),
 ]
