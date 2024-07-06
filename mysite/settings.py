@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'user_app',
+    'catalog_app',
     'colorfield',
 ]
 

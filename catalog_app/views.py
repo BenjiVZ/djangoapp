@@ -9,4 +9,4 @@ def catalog(request):
     data = {
         'productos': productos
     }
-    return render(request, "catalogo.html", data)
+    return render(request, "catalogue.html", data)
