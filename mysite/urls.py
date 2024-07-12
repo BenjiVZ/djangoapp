@@ -20,6 +20,7 @@ from myapp.views import home
 from user_app.views import log, reg
 from django.contrib.auth.views import LoginView, LogoutView
 from catalog_app.views import catalog
+from cart_app.views import cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +29,5 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='login.html'), name='logs'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logst'),
     path('catalog/', catalog, name='catalog'),
+    path('cart/', cart, name='cart'),
 ]

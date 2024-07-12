@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'myapp',
     'user_app',
     'catalog_app',
+    'cart_app',
     'colorfield',
 ]
 
