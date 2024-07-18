@@ -6,34 +6,64 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home</title>
 </head>
 
 <body>
     <header>
         <h1>Welcome to my website</h1>
     </header>
-    {% if messages %}
-    {% for message in messages %}
-    <div>
-        {{ message }}
-    </div>
-    {% endfor %}
-    {% endif %}
+    <section class="section_header">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="message">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </section>
     <nav>
         <a href="{% url 'logs' %}">Login</a>
-        <a href="{% url 'regs' %}">register</a>
-        <a href="{% url 'logst' %}">logout</a>
-        <a href="{% url 'catalog' %}">catalogue</a>
-        <a href="{% url 'cart' %}">catalogue</a>
+        <a href="{% url 'regs' %}">Register</a>
+        <a href="{% url 'logst' %}">Logout</a>
+        <a href="{% url 'catalog' %}">Catalogue</a>
+        <a href="{% url 'cart' %}">Cart</a>
     </nav>
 
     <main>
-        <h2>mein</h2>
+        <section class="sec1">
+            <h2>Featured Image</h2>
+        </section>
+
+        <section class="sec2">
+            <div id="items">
+                <div id="ofertas">
+                    {% for producto in tendencia %}
+                    <article>
+                        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                        <h2>{{ producto.nombre }}</h2>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="sec3">
+            <div id="items">
+                <div id="ofertas">
+                    {% for producto in populares %}
+                    <article>
+                        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                        <h2>{{ producto.nombre }}</h2>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <h3>footer</h3>
+        <h3>Footer</h3>
     </footer>
 </body>
 

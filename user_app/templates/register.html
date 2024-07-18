@@ -3,25 +3,26 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_reg_log.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_reg.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>Register</title>
 </head>
 
 <body>
-    <h1>Regístrate en </h1>
-    <p>Crea una cuenta para acceder a nuestras ofertas exclusivas.</p>
-    <a href="{% url 'home' %}">exit</a>
+    <header>
+        <h1>Regístrate en</h1>
+        <p>Crea una cuenta para acceder a nuestras ofertas exclusivas.</p>
+        <a class="exit" href="{% url 'home' %}">Salir</a>
+    </header>
 
     <div class="container">
-        <form class="from" method="post">
+        <form class="form" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="register">
+            <input type="submit" value="Register">
         </form>
     </div>
-
 </body>
 
 </html>
